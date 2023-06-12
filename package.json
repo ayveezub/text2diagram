@@ -2,7 +2,7 @@
   "name": "text2diagram",
   "version": "0.1.0",
   "description": "Create diagrams from textual descriptions.",
-  "main": "index.js",
+  "main": "text2diagram.js",
   "scripts": {
     "lint": "eslint .",
     "test": "jest"

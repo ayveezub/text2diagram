@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="text2diagram.css" />
+
+  <title>text2diagram</title>
+</head>
+
+<body>
+  <script src="text2diagram.js"></script>
+
+  <header class="text2diagram__header">
+    <h1>ayveezub/text2diagram</h1>
+  </header>
+
+  <form class="text2diagram__form" id="text2diagram__form">
+    <label for="text2diagram__diagram-type">Diagram Type:</label>
+    <select class="text2diagram__diagram-type" id="text2diagram__diagram-type" name="text2diagram__diagram-type">
+      <option value="actdiag" selected>ActDiag</option>
+    </select>
+    <br>
+
+    <label for="text2diagram__textarea">Diagram Source:</label>
+    <textarea class="text2diagram__source" id="text2diagram__source" name="text2diagram__source" rows="16" cols="60">
+      actdiag {
+        write -> convert -> image
+      
+        lane user {
+          label = "User"
+          write [label = "Writing text"];
+          image [label = "Get diagram image"];
+        }
+        lane Kroki {
+          convert [label = "Convert text to image"];
+        }
+      }
+    </textarea>
+    <br>
+
+    <button class="text2diagram__button" type="submit">Submit</button>
+  </form>
+
+  <label>Diagram:</label>
+  <div class="text2diagram__image" id="text2diagram__image"></div>
+</body>
+</html>

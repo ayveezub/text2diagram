@@ -1,0 +1,93 @@
+:root {
+  --bg: #ebe6f0;
+  --fg: #22181c;
+  --alt-fg: #7a79b7;
+  --alt-bg: #00afb5;
+  --font-size: 20px;
+
+  background-color: var(--bg);
+}
+
+@font-face {
+  font-family: "Iosevka";
+  src: url("src/assets/fonts/iosevka-light.woff2") format("woff2");
+
+  font-stretch: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 500;
+  text-align: center;
+}
+
+label {
+  margin-top: 3rem;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr min(100%, 80ch) 1fr;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+
+  font-family: Iosevka, sans-serif;
+  font-size: var(--font-size);
+  text-align: left;
+  color: var(--fg);
+}
+
+body > * {
+  grid-column: 2;
+}
+
+.text2diagram__header > * {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.text2diagram__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.text2diagram__form > * {
+  margin-top: 0.5rem;
+}
+
+.text2diagram__diagram-type {
+  font-family: Iosevka, sans-serif;
+  font-size: var(--font-size);
+  padding: 0.5rem;
+  border: 2px solid var(--fg);
+  border-radius: 12px;
+}
+
+.text2diagram__source {
+  font-family: Iosevka, sans-serif;
+  font-size: var(--font-size);
+  padding: 1rem;
+  background-color: var(--bg);
+  color: var(--alt-bg);
+  border: 2px solid var(--alt-fg);
+  border-radius: 12px;
+  resize: none;
+}
+
+.text2diagram__button {
+  font-family: Iosevka, sans-serif;
+  font-size: var(--font-size);
+  padding: 0.5rem;
+  border: 2px solid var(--fg);
+  border-radius: 12px;
+}
+
+.text2diagram__image {
+  display: flex;
+  justify-content: center;
+}
